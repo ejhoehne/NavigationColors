@@ -17,8 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Colors" style:UIBarButtonItemStylePlain target:self action:@selector(color:)];
 }
+-(void)color:(id)sender {
+    if (self.view.backgroundColor == [UIColor whiteColor]) {
+        self.view.backgroundColor = [UIColor blueColor];
+        
+    
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
 
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
